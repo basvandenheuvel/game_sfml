@@ -10,28 +10,30 @@ PlayState::PlayState()
 
 void PlayState::init(GameStateManager* gsm)
 {
+	this->gsm = gsm;
+
+	//Set background sprite;
+	this->bgRect.setFillColor(sf::Color::Color(255, 255, 205, 255));
+	this->bgRect.setSize(sf::Vector2f(SCREENWIDTH, SCREENHEIGHT));
 }
 
-void PlayState::handleEvents()
+void PlayState::handleEvents(sf::Event event)
 {
-	/*switch (mainEvent.type)
+	switch (event.type)
 	{
-	case SDL_KEYDOWN:
-		switch (mainEvent.key.keysym.sym)
+	/*case sf::Event::KeyPressed:
+		switch (event.key.code)
 		{
-		default:
+		case sf::Keyboard::Space:
 			break;
 		}
-		break;
-	default:
-		break;
-	}*/
+		break;*/
+	}
 }
 
 void PlayState::draw()
 {
-	//Draw background
-	//this->gsm->getSDLI()->drawTexture(textBackground, &rectBackground, NULL);
+	this->gsm->getSFMLI()->drawRectangle(this->bgRect);
 }
 
 void PlayState::update(double dt)

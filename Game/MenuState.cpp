@@ -12,29 +12,31 @@ MenuState::MenuState()
 void MenuState::init(GameStateManager* gsm)
 {
 	this->gsm = gsm;
+
+	//Set background sprite;
+	this->bgRect.setFillColor(sf::Color::Color(128, 128, 128, 255));
+	this->bgRect.setSize(sf::Vector2f(SCREENWIDTH, SCREENHEIGHT));
+
 }
 
-void MenuState::handleEvents()
+void MenuState::handleEvents(sf::Event event)
 {
-	/*switch (mainEvent.type)
+	switch (event.type)
 	{
-	case SDL_KEYDOWN:
-		switch (mainEvent.key.keysym.sym)
+	case sf::Event::KeyPressed:
+		switch (event.key.code)
 		{
-		case SDLK_s:
-			this->gsm->changeGameState(PlayState::Instance());
-			break;
-		default:
+		case sf::Keyboard::S:
+			this->gsm->pushGameState(PlayState::Instance());
 			break;
 		}
 		break;
-	default:
-		break;
-	}*/
+	}
 }
 
 void MenuState::draw()
 {
+	this->gsm->getSFMLI()->drawRectangle(this->bgRect);
 }
 
 void MenuState::update(double dt)

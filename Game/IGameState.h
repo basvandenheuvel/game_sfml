@@ -1,4 +1,5 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 #include "GameStateManager.h"
 
 class IGameState
@@ -13,7 +14,7 @@ public:
 	virtual void pause() = 0;
 	virtual void resume() = 0;
 
-	virtual void handleEvents() = 0;
+	virtual void handleEvents(sf::Event event) = 0;
 	virtual void update(double dt) = 0;
 	virtual void draw() = 0;
 

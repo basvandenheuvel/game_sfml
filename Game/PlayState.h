@@ -7,8 +7,7 @@ class PlayState :
 	public IGameState
 {
 private:
-	//SDL_Rect rectBackground;
-	//SDL_Texture* textBackground;
+	sf::RectangleShape bgRect;
 
 public:
 	PlayState();
@@ -24,7 +23,7 @@ public:
 
 	void pause();
 	void resume();
-	void handleEvents();
+	void handleEvents(sf::Event event);
 	void update(double dt);
 	void draw();
 	void cleanup();

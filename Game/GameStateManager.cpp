@@ -12,20 +12,12 @@ void GameStateManager::init(const char* title, int width, int height, bool fulls
 {
 	this->sfmlInitializer = new SFMLInitializer();
 	this->sfmlInitializer->init(title, width, height);
-	//this->sdlInitializer = new SDLInitializer();
-	//this->sdlInitializer->init(title, width, height, fullscreen);
 	
 	//Set menustate
 	this->changeGameState(MenuState::Instance());
 
 	this->running = true;
 	this->showFps = false;
-
-	//this->rectBackground.x = 100;
-	//this->rectBackground.y = 100;
-	//this->rectBackground.w = 100;
-	//this->rectBackground.h = 100;
-	//this->textBackground = IMG_LoadTexture(this->sdlInitializer->getRenderer(), (RESOURCEPATH + "person.jpg").c_str());
 }
 
 //Default loop methods
@@ -46,6 +38,9 @@ void GameStateManager::handleEvents()
 			case sf::Keyboard::Tab:
 				this->showFps = !this->showFps;
 				break;
+			default:
+				this->states.back()->handleEvents(event);
+				break;
 			}
 			break;
 		case sf::Event::MouseButtonPressed:
@@ -55,13 +50,17 @@ void GameStateManager::handleEvents()
 				break;
 			case sf::Mouse::Right:
 				break;
-			case sf::Mouse::Middle:
+			default:
+				this->states.back()->handleEvents(event);
 				break;
 			}
 			break;
 		/*case sf::Event::MouseWheelMoved:
 			std::cout << event.mouseWheel.delta << std::endl;
 			break;*/
+		default:
+			this->states.back()->handleEvents(event);
+			break;
 		}
 	}
 }
@@ -83,7 +82,7 @@ void GameStateManager::draw()
 	//Draw fps if requested
 	if (this->showFps)
 	{
-		this->sfmlInitializer->drawText(10, 10, std::string("FPS: " + std::to_string(this->fps)), sf::Color::White);
+		this->sfmlInitializer->drawText(5, 5, std::string("FPS: " + std::to_string(this->fps)), sf::Color::White, 16);
 	}
 
 	//Draw screen
