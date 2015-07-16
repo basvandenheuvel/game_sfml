@@ -1,0 +1,41 @@
+﻿Build started 16-7-2015 18:32:52.
+     1>Project "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\SFML-2.3.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameStateManager.cpp
+         GameStateManager.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\Game.exe" /INCREMENTAL /NOLOGO /LIBPATH:"..\SFML-2.3.1\lib" "sfml-window-d.lib" "sfml-graphics-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\Game.lib" /MACHINE:X86 Debug\Game.obj
+         Debug\GameStateManager.obj
+         Debug\IGameState.obj
+         Debug\Main.obj
+         Debug\MenuState.obj
+         Debug\PlayState.obj
+         Debug\SFMLInitializer.obj
+         Game.vcxproj -> C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\Game.exe
+       PostBuildEvent:
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\openal32.dll" "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\" /y
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-audio-d-2.dll" "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\" /y
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-graphics-d-2.dll" "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\" /y
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-system-d-2.dll" "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\" /y
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-window-d-2.dll" "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\" /y
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Resources" "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Debug\Resources" /e /y /i /r
+         :VCEnd
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\openal32.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-audio-d-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-graphics-d-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-system-d-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\sfml-window-d-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Resources\person.jpg
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Resources\play_background.png
+         C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Resources\fonts\OpenSans-Regular.ttf
+         3 File(s) copied
+     1>Done Building Project "C:\Users\bas.van.den.heuvel\Documents\Personal\Projects\Game\Game\Game.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.06

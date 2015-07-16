@@ -1,0 +1,50 @@
+﻿Build started 16-7-2015 18:35:40.
+     1>Project "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Game\Game.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\SFML-2.3.1\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp GameStateManager.cpp IGameState.cpp Main.cpp MenuState.cpp PlayState.cpp SFMLInitializer.cpp
+         Game.cpp
+         GameStateManager.cpp
+         IGameState.cpp
+         Main.cpp
+         MenuState.cpp
+         PlayState.cpp
+         SFMLInitializer.cpp
+     1>SFMLInitializer.cpp(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\Game.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"..\SFML-2.3.1\lib" "sfml-window.lib" "sfml-graphics.lib" "sfml-system.lib" "sfml-audio.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\Game.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\Game.lib" /MACHINE:X86 /SAFESEH Release\Game.obj
+         Release\GameStateManager.obj
+         Release\IGameState.obj
+         Release\Main.obj
+         Release\MenuState.obj
+         Release\PlayState.obj
+         Release\SFMLInitializer.obj
+         Generating code
+         Finished generating code
+         Game.vcxproj -> C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\Game.exe
+       PostBuildEvent:
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\openal32.dll" "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\" /y 
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-audio-2.dll" "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\" /y 
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-graphics-2.dll" "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\" /y 
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-system-2.dll" "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\" /y 
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-window-2.dll" "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\" /y
+         xcopy "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Resources" "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Release\Resources" /e /y /i /r
+         :VCEnd
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\openal32.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-audio-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-graphics-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-system-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\sfml-window-2.dll
+         1 File(s) copied
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Resources\person.jpg
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Resources\play_background.png
+         C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Resources\fonts\OpenSans-Regular.ttf
+         3 File(s) copied
+     1>Done Building Project "C:\Users\bas.van.den.heuvel\Documents\GitHub\game_sfml\Game\Game.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.11
