@@ -30,6 +30,11 @@ void PlayState::handleEvents(sf::Event event)
 	}
 }
 
+void PlayState::handleCallbacks()
+{
+
+}
+
 void PlayState::draw()
 {
 	this->gsm->getSFMLI()->drawRectangle(this->bgRect);

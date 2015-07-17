@@ -24,6 +24,7 @@ public:
 	void pause();
 	void resume();
 	void handleEvents(sf::Event event);
+	void handleCallbacks();
 	void update(double dt);
 	void draw();
 	void cleanup();

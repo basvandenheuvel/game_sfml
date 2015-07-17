@@ -57,13 +57,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\SFML-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\TGUI-0.6\include;..\SFML-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-window-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\SFML-2.3.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-window-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-audio-d.lib;tgui-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\TGUI-0.6\lib;..\SFML-2.3.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>xcopy "$(SolutionDir)openal32.dll" "$(TargetDir)" /y
@@ -71,6 +71,7 @@ xcopy "$(SolutionDir)sfml-audio-d-2.dll" "$(TargetDir)" /y
 xcopy "$(SolutionDir)sfml-graphics-d-2.dll" "$(TargetDir)" /y
 xcopy "$(SolutionDir)sfml-system-d-2.dll" "$(TargetDir)" /y
 xcopy "$(SolutionDir)sfml-window-d-2.dll" "$(TargetDir)" /y
+xcopy "$(SolutionDir)tgui-d.dll" "$(TargetDir)" /y
 xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -84,15 +85,15 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\SFML-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\TGUI-0.6\include;..\SFML-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>sfml-window.lib;sfml-graphics.lib;sfml-system.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\SFML-2.3.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-window.lib;sfml-graphics.lib;sfml-system.lib;sfml-audio.lib;tgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\TGUI-0.6\lib;..\SFML-2.3.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>xcopy "$(SolutionDir)openal32.dll" "$(TargetDir)" /y 
@@ -100,6 +101,7 @@ xcopy "$(SolutionDir)sfml-audio-2.dll" "$(TargetDir)" /y
 xcopy "$(SolutionDir)sfml-graphics-2.dll" "$(TargetDir)" /y 
 xcopy "$(SolutionDir)sfml-system-2.dll" "$(TargetDir)" /y 
 xcopy "$(SolutionDir)sfml-window-2.dll" "$(TargetDir)" /y
+xcopy "$(SolutionDir)tgui.dll" "$(TargetDir)" /y
 xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -112,6 +114,7 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="PlayState.h" />
     <ClInclude Include="SFMLInitializer.h" />
+    <ClInclude Include="TGUIInitializer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
@@ -121,6 +124,7 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="SFMLInitializer.cpp" />
+    <ClCompile Include="TGUIInitializer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,7 +12,7 @@ void GameStateManager::init(const char* title, int width, int height, bool fulls
 {
 	this->sfmlInitializer = new SFMLInitializer();
 	this->sfmlInitializer->init(title, width, height);
-	
+		
 	//Set menustate
 	this->changeGameState(MenuState::Instance());
 
@@ -26,7 +26,6 @@ void GameStateManager::handleEvents()
 	sf::Event event;
 	while (this->sfmlInitializer->getWindow()->pollEvent(event))
 	{
-
 		switch (event.type)
 		{
 		case sf::Event::Closed:
@@ -62,7 +61,13 @@ void GameStateManager::handleEvents()
 			this->states.back()->handleEvents(event);
 			break;
 		}
+
+
+		// Pass the event to the tgui of current state
+		this->states.back()->tguiHandleEvent(event);
 	}
+
+	this->states.back()->handleCallbacks();
 }
 
 void GameStateManager::update(double delta)
@@ -84,7 +89,7 @@ void GameStateManager::draw()
 	{
 		this->sfmlInitializer->drawText(5, 5, std::string("FPS: " + std::to_string(this->fps)), sf::Color::Color(0, 0, 0, 255), 16);
 	}
-
+	
 	//Draw screen
 	this->sfmlInitializer->getWindow()->display();
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "Header_loader.h"
 #include "IGameState.h"
+#include "TGUIInitializer.h"
 #include "GameStateManager.h"
 
 class MenuState :
@@ -9,6 +10,8 @@ class MenuState :
 private:
 	sf::RectangleShape bgRect;
 
+	tgui::Button::Ptr startButton;
+	
 public:
 	MenuState();
 	virtual ~MenuState();
@@ -23,6 +26,7 @@ public:
 	void pause();
 	void resume();
 	void handleEvents(sf::Event event);
+	void handleCallbacks();
 	void update(double dt);
 	void draw();
 	void cleanup();

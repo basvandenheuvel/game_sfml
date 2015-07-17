@@ -10,9 +10,9 @@ void SFMLInitializer::init(const char* title, int width, int height)
 {
 	//Create window
 	this->window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Close);
-
+	
 	//Set font
-	this->defaultFont.loadFromFile("OpenSans-Regular.ttf");
+	this->defaultFont.loadFromFile("Resources/fonts/OpenSans-Regular.ttf");
 }
 
 void SFMLInitializer::drawText(double x, double y, std::string text, sf::Color color, int size)
@@ -43,7 +43,13 @@ sf::RenderWindow* SFMLInitializer::getWindow()
 	return this->window;
 }
 
+sf::Font* SFMLInitializer::getDefaultFont()
+{
+	return &this->defaultFont;
+}
+
 
 SFMLInitializer::~SFMLInitializer()
 {
+	delete this->window;
 }

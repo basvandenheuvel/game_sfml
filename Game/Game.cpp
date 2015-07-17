@@ -7,7 +7,7 @@
 Game::Game()
 {
 	this->gsm = new GameStateManager();
-	this->gsm->init("Bermuda", SCREENWIDTH, SCREENHEIGHT, FULLSCREEN);
+	this->gsm->init("Runner", SCREENWIDTH, SCREENHEIGHT, FULLSCREEN);
 	this->loop();
 }
 

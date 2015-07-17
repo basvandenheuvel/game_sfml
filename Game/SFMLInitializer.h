@@ -18,5 +18,6 @@ public:
 	void drawRectangle(sf::RectangleShape rect);
 	
 	sf::RenderWindow* getWindow();
+	sf::Font* getDefaultFont();
 };
 
