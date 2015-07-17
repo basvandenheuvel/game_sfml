@@ -2,6 +2,7 @@
 #include "Header_loader.h"
 #include "IGameState.h"
 #include "GameStateManager.h"
+#include "MapLoader.h"
 
 class PlayState :
 	public IGameState

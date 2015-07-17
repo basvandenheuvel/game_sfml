@@ -75,4 +75,5 @@ void Game::loop()
 
 Game::~Game()
 {
+	delete this->gsm;
 }

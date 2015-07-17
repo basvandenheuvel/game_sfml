@@ -11,6 +11,9 @@ void PlayState::init(GameStateManager* gsm)
 {
 	this->gsm = gsm;
 
+	MapLoader* mp = new MapLoader();
+	mp->loadMap(MAP1PATH);
+
 	//Set background sprite;
 	this->bgRect.setFillColor(sf::Color::Color(255, 255, 235, 255));
 	this->bgRect.setSize(sf::Vector2f(SCREENWIDTH, SCREENHEIGHT));
@@ -58,4 +61,5 @@ void PlayState::cleanup()
 
 PlayState::~PlayState()
 {
+	delete this->gui;
 }

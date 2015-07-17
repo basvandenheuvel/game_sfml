@@ -51,5 +51,6 @@ sf::Font* SFMLInitializer::getDefaultFont()
 
 SFMLInitializer::~SFMLInitializer()
 {
+	this->window->close();
 	delete this->window;
 }

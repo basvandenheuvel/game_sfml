@@ -8,6 +8,10 @@ static int SCREENHEIGHT = 400;
 
 static bool FULLSCREEN = false;
 
+static const std::string RESOURCEPATH = "Resources";
+static const std::string MAPPATH = RESOURCEPATH + "/map";
+static const std::string MAP1PATH = MAPPATH + "/map1.tmx";
+
 static const std::string TGUICONFBLACK = "Resources/widgets/Black.conf";
 static const std::string TGUICONFWHITE = "Resources/widgets/White.conf";
 static const std::string TGUICONFBABYBLUE = "Resources/widgets/BabyBlue.conf";

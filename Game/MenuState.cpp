@@ -81,4 +81,5 @@ void MenuState::cleanup()
 
 MenuState::~MenuState()
 {
+	delete this->gui;
 }

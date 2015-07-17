@@ -111,6 +111,7 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     <ClInclude Include="GameStateManager.h" />
     <ClInclude Include="IGameState.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="MapLoader.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="PlayState.h" />
     <ClInclude Include="SFMLInitializer.h" />
@@ -121,6 +122,7 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="IGameState.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="SFMLInitializer.cpp" />
