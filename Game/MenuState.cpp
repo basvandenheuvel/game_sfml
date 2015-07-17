@@ -76,10 +76,11 @@ void MenuState::resume()
 
 void MenuState::cleanup()
 {
+	delete this->gui;
 }
 
 
 MenuState::~MenuState()
 {
-	delete this->gui;
+	this->cleanup()
 }

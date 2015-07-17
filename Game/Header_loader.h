@@ -4,7 +4,9 @@
 #include <string>
 
 static int SCREENWIDTH = 1000;
-static int SCREENHEIGHT = 400;
+static int SCREENHEIGHT = 320;
+
+static int CHUNKSIZE = 320;
 
 static bool FULLSCREEN = false;
 

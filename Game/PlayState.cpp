@@ -57,9 +57,10 @@ void PlayState::resume()
 
 void PlayState::cleanup()
 {
+	delete this->gui;
 }
 
 PlayState::~PlayState()
 {
-	delete this->gui;
+	this->cleanup();
 }

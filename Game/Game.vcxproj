@@ -106,6 +106,8 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DrawableEntity.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="Header_loader.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameStateManager.h" />
@@ -113,17 +115,21 @@ xcopy "$(SolutionDir)Resources" "$(TargetDir)Resources" /e /y /i /r</Command>
     <ClInclude Include="Main.h" />
     <ClInclude Include="MapLoader.h" />
     <ClInclude Include="MenuState.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="PlayState.h" />
     <ClInclude Include="SFMLInitializer.h" />
     <ClInclude Include="TGUIInitializer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DrawableEntity.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="IGameState.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="SFMLInitializer.cpp" />
     <ClCompile Include="TGUIInitializer.cpp" />
