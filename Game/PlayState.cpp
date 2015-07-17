@@ -13,7 +13,7 @@ void PlayState::init(GameStateManager* gsm)
 	this->gsm = gsm;
 
 	//Set background sprite;
-	this->bgRect.setFillColor(sf::Color::Color(255, 255, 205, 255));
+	this->bgRect.setFillColor(sf::Color::Color(12, 12, 205, 255));
 	this->bgRect.setSize(sf::Vector2f(SCREENWIDTH, SCREENHEIGHT));
 }
 
