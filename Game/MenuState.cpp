@@ -22,7 +22,7 @@ void MenuState::init(GameStateManager* gsm)
 	this->bgRect.setSize(sf::Vector2f(SCREENWIDTH, SCREENHEIGHT));
 
 	//Create start button
-	startButton = this->gui->createButton(100, 25, SCREENWIDTH / 2 - 50, 100, "Start game", tgui::Button::LeftMouseClicked, 11);
+	startButton = this->gui->createButton(200, 50, SCREENWIDTH / 2 - 100, 100, "Start game", tgui::Button::LeftMouseClicked, 11);
 
 }
 
