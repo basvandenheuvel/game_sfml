@@ -82,7 +82,7 @@ void GameStateManager::draw()
 	//Draw fps if requested
 	if (this->showFps)
 	{
-		this->sfmlInitializer->drawText(5, 5, std::string("FPS: " + std::to_string(this->fps)), sf::Color::White, 16);
+		this->sfmlInitializer->drawText(5, 5, std::string("FPS: " + std::to_string(this->fps)), sf::Color::Color(0, 0, 0, 255), 16);
 	}
 
 	//Draw screen

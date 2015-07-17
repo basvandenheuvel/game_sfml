@@ -1,7 +1,6 @@
 #include "PlayState.h"
 #include <iostream>
 
-
 PlayState PlayState::m_PlayState;
 
 PlayState::PlayState()
@@ -13,7 +12,7 @@ void PlayState::init(GameStateManager* gsm)
 	this->gsm = gsm;
 
 	//Set background sprite;
-	this->bgRect.setFillColor(sf::Color::Color(100, 100, 205, 255));
+	this->bgRect.setFillColor(sf::Color::Color(255, 255, 235, 255));
 	this->bgRect.setSize(sf::Vector2f(SCREENWIDTH, SCREENHEIGHT));
 }
 
